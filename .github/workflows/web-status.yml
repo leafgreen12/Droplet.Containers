@@ -16,7 +16,7 @@ on:
 
     paths:
     - src/BuildingBlocks/**
-    - src/Services/Web/**
+    - src/Web/Web.Status/**
     - .github/workflows/clients/web-status.yml
 
 env:

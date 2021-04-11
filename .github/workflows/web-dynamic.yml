@@ -16,7 +16,7 @@ on:
 
     paths:
     - src/BuildingBlocks/**
-    - src/Services/Web/**
+    - src/Web/Web.Dynamic/**
     - .github/workflows/web-dynamic.yml
 
 env:
