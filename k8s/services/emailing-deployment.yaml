@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emailing-deployment
+spec:
+  selector:
+    matchLabels:
+      app: emailing
+  template:
+    metadata:
+      labels:
+        app: emailing
+    spec:
+      containers:
+      - name: emailing
+        image: Droplet/emailing
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "10m"
+          limits:
+            memory: "1Gi"
+            cpu: 1
+        ports:
+        - containerPort: 80

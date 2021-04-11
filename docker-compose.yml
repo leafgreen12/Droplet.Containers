@@ -1,0 +1,71 @@
+version: '3.4'
+
+services:
+  dynamic.api:
+    image: ${DOCKER_REGISTRY-}dynamicapi
+    build:
+      context: .
+      dockerfile: src/Services/Dynamic/Dynamic.API/Dockerfile
+
+  emailing.api:
+    image: ${DOCKER_REGISTRY-}emailingapi
+    build:
+      context: .
+      dockerfile: src/Services/Emailing/Emailing.API/Dockerfile
+
+
+  identity.api:
+    image: ${DOCKER_REGISTRY-}identityapi
+    build:
+      context: .
+      dockerfile: src/Services/Identity/Identity.API/Dockerfile
+
+
+  settings.api:
+    image: ${DOCKER_REGISTRY-}settingsapi
+    build:
+      context: .
+      dockerfile: src/Services/Settings/Settings.API/Dockerfile
+
+
+  social.api:
+    image: ${DOCKER_REGISTRY-}socialapi
+    build:
+      context: .
+      dockerfile: src/Services/Social/Social.API/Dockerfile
+
+
+  storage.api:
+    image: ${DOCKER_REGISTRY-}storageapi
+    build:
+      context: .
+      dockerfile: src/Services/Storage/Storage.API/Dockerfile
+
+
+  webhooks.api:
+    image: ${DOCKER_REGISTRY-}webhooksapi
+    build:
+      context: .
+      dockerfile: src/Services/Webhooks/Webhooks.API/Dockerfile
+
+
+  web.dynamic:
+    image: ${DOCKER_REGISTRY-}webdynamic
+    build:
+      context: .
+      dockerfile: src/Web/Web.Dynamic/Dockerfile
+
+
+  web.settings:
+    image: ${DOCKER_REGISTRY-}websettings
+    build:
+      context: .
+      dockerfile: src/Web/Web.Settings/Dockerfile
+
+
+  web.status:
+    image: ${DOCKER_REGISTRY-}webstatus
+    build:
+      context: .
+      dockerfile: src/Web/Web.Status/Dockerfile
+

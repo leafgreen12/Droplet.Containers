@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apigateways-deployment
+spec:
+  selector:
+    matchLabels:
+      app: apigateways
+  template:
+    metadata:
+      labels:
+        app: apigateways
+    spec:
+      containers:
+      - name: apigateways
+        image: Droplet/apigateways
+        resources:
+          requests:
+            memory: "50Mi"
+            cpu: "10m"
+          limits:
+            memory: "1Gi"
+            cpu: 1
+        ports:
+        - containerPort: 80
