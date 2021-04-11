@@ -1,4 +1,4 @@
-name: dynamic-api
+name: web-dynamic
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
 
     paths:
     - src/BuildingBlocks/**
-    - src/Services/Dynamic/**
-    - .github/workflows/dynamic-api.yml
+    - src/Web/Web.Dynamic/**
+    - .github/workflows/clients/web-dynamic.yml
 
   pull_request:
     branches:
@@ -16,12 +16,12 @@ on:
 
     paths:
     - src/BuildingBlocks/**
-    - src/Services/Dynamic/**
-    - .github/workflows/dynamic-api.yml
+    - src/Services/Web/**
+    - .github/workflows/clients/web-dynamic.yml
 
 env:
-  SERVICE: dynamic-api
-  IMAGE: dynamic.api
+  SERVICE: web-dynamic
+  IMAGE: web.dynamic
 
 jobs:
   BuildContainerForPR_Linux:

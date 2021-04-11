@@ -1,71 +1,76 @@
 version: '3.4'
 
 services:
-  dynamic.api:
-    image: ${DOCKER_REGISTRY-}dynamicapi
+  apigateways:
+    image: ${REGISTRY:-droplet}/apigateways:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/ApiGateways/ApiGateways/Dockerfile
+
+  dynamic-api:
+    image: ${REGISTRY:-droplet}/dynamic.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Dynamic/Dynamic.API/Dockerfile
 
-  emailing.api:
-    image: ${DOCKER_REGISTRY-}emailingapi
+  emailing-api:
+    image: ${REGISTRY:-droplet}/emailing.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Emailing/Emailing.API/Dockerfile
 
 
-  identity.api:
-    image: ${DOCKER_REGISTRY-}identityapi
+  identity-api:
+    image: ${REGISTRY:-droplet}/identity.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Identity/Identity.API/Dockerfile
 
 
-  settings.api:
-    image: ${DOCKER_REGISTRY-}settingsapi
+  settings-api:
+    image: ${REGISTRY:-droplet}/settings.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Settings/Settings.API/Dockerfile
 
 
-  social.api:
-    image: ${DOCKER_REGISTRY-}socialapi
+  social-api:
+    image: ${REGISTRY:-droplet}/social.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Social/Social.API/Dockerfile
 
 
-  storage.api:
-    image: ${DOCKER_REGISTRY-}storageapi
+  storage-api:
+    image: ${REGISTRY:-droplet}/storage.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Storage/Storage.API/Dockerfile
 
 
-  webhooks.api:
-    image: ${DOCKER_REGISTRY-}webhooksapi
+  webhooks-api:
+    image: ${REGISTRY:-droplet}/webhooks.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Webhooks/Webhooks.API/Dockerfile
 
 
-  web.dynamic:
-    image: ${DOCKER_REGISTRY-}webdynamic
+  web-dynamic:
+    image: ${REGISTRY:-droplet}/web.dynamic:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Web/Web.Dynamic/Dockerfile
 
 
-  web.settings:
-    image: ${DOCKER_REGISTRY-}websettings
+  web-settings:
+    image: ${REGISTRY:-droplet}/web.settings:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Web/Web.Settings/Dockerfile
 
 
-  web.status:
-    image: ${DOCKER_REGISTRY-}webstatus
+  web-status:
+    image: ${REGISTRY:-droplet}/web.status:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: src/Web/Web.Status/Dockerfile
-
