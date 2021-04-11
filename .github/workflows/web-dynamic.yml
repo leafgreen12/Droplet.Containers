@@ -8,7 +8,7 @@ on:
     paths:
     - src/BuildingBlocks/**
     - src/Web/Web.Dynamic/**
-    - .github/workflows/clients/web-dynamic.yml
+    - .github/workflows/web-dynamic.yml
 
   pull_request:
     branches:
@@ -17,7 +17,7 @@ on:
     paths:
     - src/BuildingBlocks/**
     - src/Services/Web/**
-    - .github/workflows/clients/web-dynamic.yml
+    - .github/workflows/web-dynamic.yml
 
 env:
   SERVICE: web-dynamic

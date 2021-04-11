@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
 		<DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
 		<UserSecretsId>2165f645-4e88-43cb-974c-a2cc4e97f071</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>

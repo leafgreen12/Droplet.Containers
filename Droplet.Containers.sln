@@ -70,6 +70,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\settings-api.yml = .github\workflows\settings-api.yml
 		.github\workflows\social-api.yml = .github\workflows\social-api.yml
 		.github\workflows\storage-api.yml = .github\workflows\storage-api.yml
+		.github\workflows\web-dynamic.yml = .github\workflows\web-dynamic.yml
+		.github\workflows\web-settings.yml = .github\workflows\web-settings.yml
+		.github\workflows\web-status.yml = .github\workflows\web-status.yml
 		.github\workflows\webhooks-api.yml = .github\workflows\webhooks-api.yml
 	EndProjectSection
 EndProject
@@ -103,13 +106,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{175C59D9-5
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateways", "src\ApiGateways\ApiGateways\ApiGateways.csproj", "{B22A33A1-7FF1-471F-8AAF-C16B7D293EC1}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{C5E06D64-746A-4A7E-B183-1C69D4C5E18D}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\clients\web-dynamic.yml = .github\workflows\clients\web-dynamic.yml
-		.github\workflows\clients\web-settings.yml = .github\workflows\clients\web-settings.yml
-		.github\workflows\clients\web-status.yml = .github\workflows\clients\web-status.yml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -206,7 +202,6 @@ Global
 		{BB1866B7-CD92-436D-AEF9-F963CE385E56} = {DD9AB35E-F57F-405C-AEFD-DC4DEE96346E}
 		{175C59D9-5832-41A7-B831-DF89D9E5D1D4} = {74D81EB7-EB46-4E4B-B650-B912288D548B}
 		{B22A33A1-7FF1-471F-8AAF-C16B7D293EC1} = {EEECB3E7-FC2D-4494-BE59-588269F3BB67}
-		{C5E06D64-746A-4A7E-B183-1C69D4C5E18D} = {AFB131FB-A1AB-4277-9F75-964DFCE42A10}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D55FFE0-053A-4787-9B5F-E610C8297254}
