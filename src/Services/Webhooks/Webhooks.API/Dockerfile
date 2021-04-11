@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Services/Webhooks/Webhooks.csproj", "src/Services/Webhooks/"]
-RUN dotnet restore "src/Services/Webhooks/Webhooks.csproj"
+COPY ["src/Services/Webhooks/Webhooks.API/Webhooks.API.csproj", "src/Services/Webhooks/Webhooks.API/"]
+RUN dotnet restore "src/Services/Webhooks/Webhooks.API/Webhooks.API.csproj"
 COPY . .
-WORKDIR "/src/src/Services/Webhooks"
-RUN dotnet build "Webhooks.csproj" -c Release -o /app/build
+WORKDIR "/src/src/Services/Webhooks/Webhooks.API"
+RUN dotnet build "Webhooks.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Webhooks.csproj" -c Release -o /app/publish
+RUN dotnet publish "Webhooks.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Webhooks.dll"]
+ENTRYPOINT ["dotnet", "Webhooks.API.dll"]

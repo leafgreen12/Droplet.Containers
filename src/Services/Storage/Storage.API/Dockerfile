@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Services/Storage/Storage.csproj", "src/Services/Storage/"]
-RUN dotnet restore "src/Services/Storage/Storage.csproj"
+COPY ["src/Services/Storage/Storage.API/Storage.API.csproj", "src/Services/Storage/Storage.API/"]
+RUN dotnet restore "src/Services/Storage/Storage.API/Storage.API.csproj"
 COPY . .
-WORKDIR "/src/src/Services/Storage"
-RUN dotnet build "Storage.csproj" -c Release -o /app/build
+WORKDIR "/src/src/Services/Storage/Storage.API"
+RUN dotnet build "Storage.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Storage.csproj" -c Release -o /app/publish
+RUN dotnet publish "Storage.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Storage.dll"]
+ENTRYPOINT ["dotnet", "Storage.API.dll"]

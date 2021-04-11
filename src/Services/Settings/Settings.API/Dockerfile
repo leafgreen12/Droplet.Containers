@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Services/Settings/Settings.csproj", "src/Services/Settings/"]
-RUN dotnet restore "src/Services/Settings/Settings.csproj"
+COPY ["src/Services/Settings/Settings.API/Settings.API.csproj", "src/Services/Settings/Settings.API/"]
+RUN dotnet restore "src/Services/Settings/Settings.API/Settings.API.csproj"
 COPY . .
-WORKDIR "/src/src/Services/Settings"
-RUN dotnet build "Settings.csproj" -c Release -o /app/build
+WORKDIR "/src/src/Services/Settings/Settings.API"
+RUN dotnet build "Settings.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Settings.csproj" -c Release -o /app/publish
+RUN dotnet publish "Settings.API.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Settings.dll"]
+ENTRYPOINT ["dotnet", "Settings.API.dll"]

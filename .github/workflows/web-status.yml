@@ -8,7 +8,7 @@ on:
     paths:
     - src/BuildingBlocks/**
     - src/Web/Web.Status/**
-    - .github/workflows/clients/web-status.yml
+    - .github/workflows/web-status.yml
 
   pull_request:
     branches:
@@ -17,7 +17,7 @@ on:
     paths:
     - src/BuildingBlocks/**
     - src/Web/Web.Status/**
-    - .github/workflows/clients/web-status.yml
+    - .github/workflows/web-status.yml
 
 env:
   SERVICE: web-status

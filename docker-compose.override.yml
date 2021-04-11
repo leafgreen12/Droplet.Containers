@@ -22,6 +22,7 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
   emailing-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

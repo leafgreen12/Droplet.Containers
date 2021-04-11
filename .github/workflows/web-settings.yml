@@ -8,7 +8,7 @@ on:
     paths:
     - src/BuildingBlocks/**
     - src/Web/Web.Settings/**
-    - .github/workflows/clients/web-settings.yml
+    - .github/workflows/web-settings.yml
 
   pull_request:
     branches:
@@ -17,7 +17,7 @@ on:
     paths:
     - src/BuildingBlocks/**
     - src/Web/Web.Settings/**
-    - .github/workflows/clients/web-settings.yml
+    - .github/workflows/web-settings.yml
 
 env:
   SERVICE: web-settings
@@ -33,7 +33,7 @@ jobs:
     
     - name: Compose build ${{ env.SERVICE }}
       run: sudo -E docker-compose build ${{ env.SERVICE }}
-      working-directory: ./src
+      working-directory: .
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
@@ -78,7 +78,7 @@ jobs:
 
     - name: Compose push ${{ env.SERVICE }}
       run: sudo -E docker-compose push ${{ env.SERVICE }}
-      working-directory: ./src
+      working-directory: .
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
