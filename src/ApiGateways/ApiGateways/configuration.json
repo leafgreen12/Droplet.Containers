@@ -1,0 +1,66 @@
+{
+  //"ReRoutes": [
+  //  {
+  //    "DownstreamPathTemplate": "/api/{version}/{everything}",
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "dynamic-api",
+  //        "Port": 80
+  //      }
+  //    ],
+  //    "UpstreamPathTemplate": "/api/{version}/dynamic/{everything}",
+  //    "UpstreamHttpMethod": []
+  //  },
+  //  {
+  //    "DownstreamPathTemplate": "/api/{version}/{everything}",
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "emailing-api",
+  //        "Port": 80
+  //      }
+  //    ],
+  //    "UpstreamPathTemplate": "/api/{version}/emailing/{everything}",
+  //    "UpstreamHttpMethod": []
+  //  },
+  //  {
+  //    "DownstreamPathTemplate": "/api/{version}/{everything}",
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "identity-api",
+  //        "Port": 80
+  //      }
+  //    ],
+  //    "UpstreamPathTemplate": "/api/{version}/identity/{everything}",
+  //    "UpstreamHttpMethod": []
+  //  },
+  //  {
+  //    "DownstreamPathTemplate": "/api/{version}/{everything}",
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "settings-api",
+  //        "Port": 80
+  //      }
+  //    ],
+  //    "UpstreamPathTemplate": "/api/{version}/settings/{everything}",
+  //    "UpstreamHttpMethod": []
+  //  },
+  //  {
+  //    "DownstreamPathTemplate": "/api/{version}/{everything}",
+  //    "DownstreamScheme": "http",
+  //    "DownstreamHostAndPorts": [
+  //      {
+  //        "Host": "storage-api",
+  //        "Port": 80
+  //      }
+  //    ],
+  //    "UpstreamPathTemplate": "/api/{version}/storage/{everything}",
+  //    "UpstreamHttpMethod": []
+  //  }
+  //],
+  //"GlobalConfiguration": {
+  //}
+}
