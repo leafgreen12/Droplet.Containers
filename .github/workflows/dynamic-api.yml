@@ -68,13 +68,13 @@ jobs:
         echo "BRANCH=$currentbranch" >> $GITHUB_ENV
       shell: bash
 
-    #- name: Compose build ${{ env.SERVICE }}
-    #  run: sudo -E docker-compose build ${{ env.SERVICE }}
-    #  working-directory: .
-    #  shell: bash
-    #  env:
-    #    TAG: ${{ env.BRANCH }}
-    #    REGISTRY: ${{ secrets.REGISTRY_ENDPOINT }}
+    - name: Compose build ${{ env.SERVICE }}
+      run: sudo -E docker-compose build ${{ env.SERVICE }}
+      working-directory: .
+      shell: bash
+      env:
+        TAG: ${{ env.BRANCH }}
+        REGISTRY: ${{ secrets.REGISTRY_ENDPOINT }}
 
     #- name: Compose push ${{ env.SERVICE }}
     #  run: sudo -E docker-compose push ${{ env.SERVICE }}
