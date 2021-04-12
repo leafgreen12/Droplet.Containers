@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Social.Domain\Social.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
