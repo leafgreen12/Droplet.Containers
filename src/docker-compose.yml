@@ -4,7 +4,7 @@ services:
     image: ${REGISTRY:-droplet}/apigateways:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
-      dockerfile: ApiGateways/ApiGateways/Dockerfile
+      dockerfile: ApiGateways/Dockerfile
 
 
   dynamic-api:
