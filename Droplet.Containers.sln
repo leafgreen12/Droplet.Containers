@@ -96,7 +96,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{DD9AB3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.API", "src\Services\Social\Social.API\Social.API.csproj", "{BB1866B7-CD92-436D-AEF9-F963CE385E56}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{65756B70-2D62-4CDB-A300-09F5FCA59AFA}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src/docker-compose.dcproj", "{65756B70-2D62-4CDB-A300-09F5FCA59AFA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{175C59D9-5832-41A7-B831-DF89D9E5D1D4}"
 	ProjectSection(SolutionItems) = preProject
