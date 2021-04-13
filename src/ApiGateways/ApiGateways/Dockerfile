@@ -3,13 +3,14 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/ApiGateways/ApiGateways/ApiGateways.csproj", "src/ApiGateways/ApiGateways/"]
-RUN dotnet restore "src/ApiGateways/ApiGateways/ApiGateways.csproj"
+COPY ["ApiGateways/ApiGateways/ApiGateways.csproj", "ApiGateways/ApiGateways/"]
+RUN dotnet restore "ApiGateways/ApiGateways/ApiGateways.csproj"
 COPY . .
-WORKDIR "/src/src/ApiGateways/ApiGateways"
+WORKDIR "/src/ApiGateways/ApiGateways"
 RUN dotnet build "ApiGateways.csproj" -c Release -o /app/build
 
 FROM build AS publish

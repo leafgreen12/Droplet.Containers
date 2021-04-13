@@ -3,13 +3,16 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Services/Dynamic/Dynamic.API/Dynamic.API.csproj", "src/Services/Dynamic/Dynamic.API/"]
-RUN dotnet restore "src/Services/Dynamic/Dynamic.API/Dynamic.API.csproj"
+COPY ["Services/Dynamic/Dynamic.API/Dynamic.API.csproj", "Services/Dynamic/Dynamic.API/"]
+COPY ["Services/Dynamic/Dynamic.Infrastructure/Dynamic.Infrastructure.csproj", "Services/Dynamic/Dynamic.Infrastructure/"]
+COPY ["Services/Dynamic/Dynamic.Domain/Dynamic.Domain.csproj", "Services/Dynamic/Dynamic.Domain/"]
+RUN dotnet restore "Services/Dynamic/Dynamic.API/Dynamic.API.csproj"
 COPY . .
-WORKDIR "/src/src/Services/Dynamic/Dynamic.API"
+WORKDIR "/src/Services/Dynamic/Dynamic.API"
 RUN dotnet build "Dynamic.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

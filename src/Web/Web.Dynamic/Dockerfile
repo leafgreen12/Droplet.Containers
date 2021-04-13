@@ -3,13 +3,14 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Web/Web.Dynamic/Web.Dynamic.csproj", "src/Web/Web.Dynamic/"]
-RUN dotnet restore "src/Web/Web.Dynamic/Web.Dynamic.csproj"
+COPY ["Web/Web.Dynamic/Web.Dynamic.csproj", "Web/Web.Dynamic/"]
+RUN dotnet restore "Web/Web.Dynamic/Web.Dynamic.csproj"
 COPY . .
-WORKDIR "/src/src/Web/Web.Dynamic"
+WORKDIR "/src/Web/Web.Dynamic"
 RUN dotnet build "Web.Dynamic.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -3,19 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{74D81EB7-EB46-4E4B-B650-B912288D548B}"
-	ProjectSection(SolutionItems) = preProject
-		docs\.gitignore = docs\.gitignore
-		docs\package.json = docs\package.json
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{F4E0BFAC-7B4E-43C3-94DE-F450634C2F03}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{1C03EB2E-2CE0-4C86-A640-23168AF8503F}"
-	ProjectSection(SolutionItems) = preProject
-		scripts\tag_all.sh = scripts\tag_all.sh
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6F2716C4-820B-4315-9590-4D89D783C001}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{EEECB3E7-FC2D-4494-BE59-588269F3BB67}"
@@ -40,40 +27,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.API", "Services\We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.API", "Services\Emailing\Emailing.API\Emailing.API.csproj", "{FA5B4B4B-F51F-47D2-91C9-DE4DABA8C0D8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", "{B285A601-21B4-4A2B-BCB9-B9AD12797B33}"
-	ProjectSection(SolutionItems) = preProject
-		k8s\extensions\postgresql-deployment.yaml = k8s\extensions\postgresql-deployment.yaml
-		k8s\extensions\rabbitmq-deployment.yaml = k8s\extensions\rabbitmq-deployment.yaml
-		k8s\extensions\redis-deployment.yaml = k8s\extensions\redis-deployment.yaml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{4CEF0C3F-2212-4EE4-A66D-C9632F77AEB8}"
-	ProjectSection(SolutionItems) = preProject
-		k8s\services\apigateways-deployment.yaml = k8s\services\apigateways-deployment.yaml
-		k8s\services\emailing-deployment.yaml = k8s\services\emailing-deployment.yaml
-		k8s\services\identity-deployment.yaml = k8s\services\identity-deployment.yaml
-		k8s\services\settings-deployment.yaml = k8s\services\settings-deployment.yaml
-		k8s\services\storage-deployment.yaml = k8s\services\storage-deployment.yaml
-		k8s\services\webhooks-deployment.yaml = k8s\services\webhooks-deployment.yaml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{1FCB513A-8239-49A4-8FD3-7C54049E3FB9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{AFB131FB-A1AB-4277-9F75-964DFCE42A10}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\apigateways.yml = .github\workflows\apigateways.yml
-		.github\workflows\dynamic-api.yml = .github\workflows\dynamic-api.yml
-		.github\workflows\emailing-api.yml = .github\workflows\emailing-api.yml
-		.github\workflows\identity-api.yml = .github\workflows\identity-api.yml
-		.github\workflows\settings-api.yml = .github\workflows\settings-api.yml
-		.github\workflows\social-api.yml = .github\workflows\social-api.yml
-		.github\workflows\storage-api.yml = .github\workflows\storage-api.yml
-		.github\workflows\web-dynamic.yml = .github\workflows\web-dynamic.yml
-		.github\workflows\web-settings.yml = .github\workflows\web-settings.yml
-		.github\workflows\web-status.yml = .github\workflows\web-status.yml
-		.github\workflows\webhooks-api.yml = .github\workflows\webhooks-api.yml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dynamic", "Dynamic", "{1D27D5BA-CB91-489E-8C2F-1255DE5A46E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Emailing", "Emailing", "{1B87D4E4-1CB3-42DB-8270-E8235B7B5365}"
@@ -96,12 +49,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{DD9AB3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.API", "Services\Social\Social.API\Social.API.csproj", "{BB1866B7-CD92-436D-AEF9-F963CE385E56}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src/docker-compose.dcproj", "{65756B70-2D62-4CDB-A300-09F5FCA59AFA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{175C59D9-5832-41A7-B831-DF89D9E5D1D4}"
-	ProjectSection(SolutionItems) = preProject
-		docs\docs\README.md = docs\docs\README.md
-	EndProjectSection
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{65756B70-2D62-4CDB-A300-09F5FCA59AFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateways", "ApiGateways\ApiGateways\ApiGateways.csproj", "{B22A33A1-7FF1-471F-8AAF-C16B7D293EC1}"
 EndProject
@@ -295,9 +243,6 @@ Global
 		{52C6F102-A226-4C32-AC6E-F6C684A0AF86} = {2DADA23B-DFE4-487D-B122-671427EC279F}
 		{92E422AC-7BF1-434C-AE00-5FC31DA5EDE3} = {EB9B6BEA-AAC7-40CA-B6BE-48AAE520D3F6}
 		{FA5B4B4B-F51F-47D2-91C9-DE4DABA8C0D8} = {1B87D4E4-1CB3-42DB-8270-E8235B7B5365}
-		{B285A601-21B4-4A2B-BCB9-B9AD12797B33} = {F4E0BFAC-7B4E-43C3-94DE-F450634C2F03}
-		{4CEF0C3F-2212-4EE4-A66D-C9632F77AEB8} = {F4E0BFAC-7B4E-43C3-94DE-F450634C2F03}
-		{AFB131FB-A1AB-4277-9F75-964DFCE42A10} = {1FCB513A-8239-49A4-8FD3-7C54049E3FB9}
 		{1D27D5BA-CB91-489E-8C2F-1255DE5A46E2} = {EEFB4FC3-E3C8-4839-927E-12246056AC8B}
 		{1B87D4E4-1CB3-42DB-8270-E8235B7B5365} = {EEFB4FC3-E3C8-4839-927E-12246056AC8B}
 		{A97DF04B-515C-4584-9A80-1FAD45BD2D5F} = {EEFB4FC3-E3C8-4839-927E-12246056AC8B}
@@ -309,7 +254,6 @@ Global
 		{65E1334C-9968-421B-8568-F83E39E40FE5} = {5079872C-3271-40D3-8F30-965512B9A9EC}
 		{DD9AB35E-F57F-405C-AEFD-DC4DEE96346E} = {EEFB4FC3-E3C8-4839-927E-12246056AC8B}
 		{BB1866B7-CD92-436D-AEF9-F963CE385E56} = {DD9AB35E-F57F-405C-AEFD-DC4DEE96346E}
-		{175C59D9-5832-41A7-B831-DF89D9E5D1D4} = {74D81EB7-EB46-4E4B-B650-B912288D548B}
 		{B22A33A1-7FF1-471F-8AAF-C16B7D293EC1} = {EEECB3E7-FC2D-4494-BE59-588269F3BB67}
 		{78D7C40A-AB16-4CA6-A098-116314FCD501} = {1D27D5BA-CB91-489E-8C2F-1255DE5A46E2}
 		{E100FCD0-2410-4F96-9167-66484FAC8BD3} = {1D27D5BA-CB91-489E-8C2F-1255DE5A46E2}

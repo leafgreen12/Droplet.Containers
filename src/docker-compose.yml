@@ -1,5 +1,4 @@
 version: '3.4'
-
 services:
   apigateways:
     image: ${REGISTRY:-droplet}/apigateways:${PLATFORM:-linux}-${TAG:-latest}
@@ -7,11 +6,13 @@ services:
       context: .
       dockerfile: ApiGateways/ApiGateways/Dockerfile
 
+
   dynamic-api:
     image: ${REGISTRY:-droplet}/dynamic.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Services/Dynamic/Dynamic.API/Dockerfile
+
 
   emailing-api:
     image: ${REGISTRY:-droplet}/emailing.api:${PLATFORM:-linux}-${TAG:-latest}
@@ -74,3 +75,4 @@ services:
     build:
       context: .
       dockerfile: Web/Web.Status/Dockerfile
+

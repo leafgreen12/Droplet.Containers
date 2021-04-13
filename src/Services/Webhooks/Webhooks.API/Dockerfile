@@ -3,13 +3,16 @@
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["src/Services/Webhooks/Webhooks.API/Webhooks.API.csproj", "src/Services/Webhooks/Webhooks.API/"]
-RUN dotnet restore "src/Services/Webhooks/Webhooks.API/Webhooks.API.csproj"
+COPY ["Services/Webhooks/Webhooks.API/Webhooks.API.csproj", "Services/Webhooks/Webhooks.API/"]
+COPY ["Services/Webhooks/Webhooks.Infrastructure/Webhooks.Infrastructure.csproj", "Services/Webhooks/Webhooks.Infrastructure/"]
+COPY ["Services/Webhooks/Webhooks.Domain/Webhooks.Domain.csproj", "Services/Webhooks/Webhooks.Domain/"]
+RUN dotnet restore "Services/Webhooks/Webhooks.API/Webhooks.API.csproj"
 COPY . .
-WORKDIR "/src/src/Services/Webhooks/Webhooks.API"
+WORKDIR "/src/Services/Webhooks/Webhooks.API"
 RUN dotnet build "Webhooks.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
