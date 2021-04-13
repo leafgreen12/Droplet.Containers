@@ -52,6 +52,7 @@ jobs:
           sudo service docker restart
           docker version -f '{{.Client.Experimental}}'
           docker version -f '{{.Server.Experimental}}'
+
     - name: Login to Container Registry
       uses: docker/login-action@v1
       with:
