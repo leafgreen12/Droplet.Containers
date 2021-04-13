@@ -26,19 +26,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{EE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{5079872C-3271-40D3-8F30-965512B9A9EC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHost.Customization", "src\BuildingBlocks\WebHost.Customization\WebHost.Customization.csproj", "{0D8F9918-07AD-467B-8538-1558A8013C2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebHost.Customization", "BuildingBlocks\WebHost.Customization\WebHost.Customization.csproj", "{0D8F9918-07AD-467B-8538-1558A8013C2D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "src\Services\Identity\Identity.API\Identity.API.csproj", "{0A7762FF-729A-4B07-9DFD-456EDFA4BB66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Services\Identity\Identity.API\Identity.API.csproj", "{0A7762FF-729A-4B07-9DFD-456EDFA4BB66}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.API", "src\Services\Settings\Settings.API\Settings.API.csproj", "{1DFA9FBC-1847-4781-91EE-566B68767C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.API", "Services\Settings\Settings.API\Settings.API.csproj", "{1DFA9FBC-1847-4781-91EE-566B68767C55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic.API", "src\Services\Dynamic\Dynamic.API\Dynamic.API.csproj", "{C9495735-266E-4671-9848-2D2DB957344F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic.API", "Services\Dynamic\Dynamic.API\Dynamic.API.csproj", "{C9495735-266E-4671-9848-2D2DB957344F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.API", "src\Services\Storage\Storage.API\Storage.API.csproj", "{52C6F102-A226-4C32-AC6E-F6C684A0AF86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.API", "Services\Storage\Storage.API\Storage.API.csproj", "{52C6F102-A226-4C32-AC6E-F6C684A0AF86}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.API", "src\Services\Webhooks\Webhooks.API\Webhooks.API.csproj", "{92E422AC-7BF1-434C-AE00-5FC31DA5EDE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.API", "Services\Webhooks\Webhooks.API\Webhooks.API.csproj", "{92E422AC-7BF1-434C-AE00-5FC31DA5EDE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.API", "src\Services\Emailing\Emailing.API\Emailing.API.csproj", "{FA5B4B4B-F51F-47D2-91C9-DE4DABA8C0D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.API", "Services\Emailing\Emailing.API\Emailing.API.csproj", "{FA5B4B4B-F51F-47D2-91C9-DE4DABA8C0D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", "{B285A601-21B4-4A2B-BCB9-B9AD12797B33}"
 	ProjectSection(SolutionItems) = preProject
@@ -86,15 +86,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storage", "Storage", "{2DAD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webhooks", "Webhooks", "{EB9B6BEA-AAC7-40CA-B6BE-48AAE520D3F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Status", "src\Web\Web.Status\Web.Status.csproj", "{819D15B0-67A2-4C15-8A91-841EEAF0BA22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Status", "Web\Web.Status\Web.Status.csproj", "{819D15B0-67A2-4C15-8A91-841EEAF0BA22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Settings", "src\Web\Web.Settings\Web.Settings.csproj", "{E168E886-5FD5-4AEC-9BF3-AA39F1863912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Settings", "Web\Web.Settings\Web.Settings.csproj", "{E168E886-5FD5-4AEC-9BF3-AA39F1863912}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Dynamic", "src\Web\Web.Dynamic\Web.Dynamic.csproj", "{65E1334C-9968-421B-8568-F83E39E40FE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Dynamic", "Web\Web.Dynamic\Web.Dynamic.csproj", "{65E1334C-9968-421B-8568-F83E39E40FE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Social", "Social", "{DD9AB35E-F57F-405C-AEFD-DC4DEE96346E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.API", "src\Services\Social\Social.API\Social.API.csproj", "{BB1866B7-CD92-436D-AEF9-F963CE385E56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.API", "Services\Social\Social.API\Social.API.csproj", "{BB1866B7-CD92-436D-AEF9-F963CE385E56}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src/docker-compose.dcproj", "{65756B70-2D62-4CDB-A300-09F5FCA59AFA}"
 EndProject
@@ -103,47 +103,47 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{175C59D9-5
 		docs\docs\README.md = docs\docs\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateways", "src\ApiGateways\ApiGateways\ApiGateways.csproj", "{B22A33A1-7FF1-471F-8AAF-C16B7D293EC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateways", "ApiGateways\ApiGateways\ApiGateways.csproj", "{B22A33A1-7FF1-471F-8AAF-C16B7D293EC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic.Domain", "src\Services\Dynamic\Dynamic.Domain\Dynamic.Domain.csproj", "{78D7C40A-AB16-4CA6-A098-116314FCD501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic.Domain", "Services\Dynamic\Dynamic.Domain\Dynamic.Domain.csproj", "{78D7C40A-AB16-4CA6-A098-116314FCD501}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic.Infrastructure", "src\Services\Dynamic\Dynamic.Infrastructure\Dynamic.Infrastructure.csproj", "{E100FCD0-2410-4F96-9167-66484FAC8BD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dynamic.Infrastructure", "Services\Dynamic\Dynamic.Infrastructure\Dynamic.Infrastructure.csproj", "{E100FCD0-2410-4F96-9167-66484FAC8BD3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.Infrastructure", "src\Services\Emailing\Emailing.Infrastructure\Emailing.Infrastructure.csproj", "{AE9A86C1-B82F-4B4A-B66B-92C2F5C4BD13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.Infrastructure", "Services\Emailing\Emailing.Infrastructure\Emailing.Infrastructure.csproj", "{AE9A86C1-B82F-4B4A-B66B-92C2F5C4BD13}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.Domain", "src\Services\Emailing\Emailing.Domain\Emailing.Domain.csproj", "{71965EC4-FEAD-47E3-B4E9-A14670D59666}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emailing.Domain", "Services\Emailing\Emailing.Domain\Emailing.Domain.csproj", "{71965EC4-FEAD-47E3-B4E9-A14670D59666}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Domain", "src\Services\Identity\Identity.Domain\Identity.Domain.csproj", "{150DBA14-BD16-4D48-8CC6-D60FE99EF986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Domain", "Services\Identity\Identity.Domain\Identity.Domain.csproj", "{150DBA14-BD16-4D48-8CC6-D60FE99EF986}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Infrastructure", "src\Services\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{73A0C566-18E7-4CF7-AC7C-728D93825589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Infrastructure", "Services\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{73A0C566-18E7-4CF7-AC7C-728D93825589}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Domain", "src\Services\Settings\Settings.Domain\Settings.Domain.csproj", "{C7FAE091-DCB4-492F-B594-D3E6081632A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Domain", "Services\Settings\Settings.Domain\Settings.Domain.csproj", "{C7FAE091-DCB4-492F-B594-D3E6081632A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Infrastructure", "src\Services\Settings\Settings.Infrastructure\Settings.Infrastructure.csproj", "{900E4F01-10D0-4F13-8B35-8F7BD8C343D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Settings.Infrastructure", "Services\Settings\Settings.Infrastructure\Settings.Infrastructure.csproj", "{900E4F01-10D0-4F13-8B35-8F7BD8C343D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.Domain", "src\Services\Social\Social.Domain\Social.Domain.csproj", "{DA43DC7A-3AF0-4E29-BF74-E28280F37F8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.Domain", "Services\Social\Social.Domain\Social.Domain.csproj", "{DA43DC7A-3AF0-4E29-BF74-E28280F37F8B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.Infrastructure", "src\Services\Social\Social.Infrastructure\Social.Infrastructure.csproj", "{1318CD0D-D7AD-4FB0-8A23-C5527BD0BA02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Social.Infrastructure", "Services\Social\Social.Infrastructure\Social.Infrastructure.csproj", "{1318CD0D-D7AD-4FB0-8A23-C5527BD0BA02}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.Infrastructure", "src\Services\Storage\Storage.Infrastructure\Storage.Infrastructure.csproj", "{40D598B8-7A2B-4780-A444-1292E3747008}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.Infrastructure", "Services\Storage\Storage.Infrastructure\Storage.Infrastructure.csproj", "{40D598B8-7A2B-4780-A444-1292E3747008}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.Domain", "src\Services\Storage\Storage.Domain\Storage.Domain.csproj", "{F90FEB27-EC7D-45E5-95B0-83FF1250AA43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage.Domain", "Services\Storage\Storage.Domain\Storage.Domain.csproj", "{F90FEB27-EC7D-45E5-95B0-83FF1250AA43}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.Domain", "src\Services\Webhooks\Webhooks.Domain\Webhooks.Domain.csproj", "{F367A0F5-D4DC-4445-9937-4B62B005E8E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.Domain", "Services\Webhooks\Webhooks.Domain\Webhooks.Domain.csproj", "{F367A0F5-D4DC-4445-9937-4B62B005E8E8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.Infrastructure", "src\Services\Webhooks\Webhooks.Infrastructure\Webhooks.Infrastructure.csproj", "{A6583BBB-B441-400C-869F-8B644D29ECE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webhooks.Infrastructure", "Services\Webhooks\Webhooks.Infrastructure\Webhooks.Infrastructure.csproj", "{A6583BBB-B441-400C-869F-8B644D29ECE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{9B95B6E4-70FF-4C58-8FBF-7AF38161BE98}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "src\BuildingBlocks\EventBus\EventBus\EventBus.csproj", "{02B8C7D6-B01D-44BA-9D5D-32420523CA24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "BuildingBlocks\EventBus\EventBus\EventBus.csproj", "{02B8C7D6-B01D-44BA-9D5D-32420523CA24}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Tests", "src\BuildingBlocks\EventBus\EventBus.Tests\EventBus.Tests.csproj", "{DD88C253-7F35-423C-A2B5-58DF469E3149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Tests", "BuildingBlocks\EventBus\EventBus.Tests\EventBus.Tests.csproj", "{DD88C253-7F35-423C-A2B5-58DF469E3149}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "src\BuildingBlocks\EventBus\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{2166E085-731A-409F-8349-8BD79BFCF283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusRabbitMQ", "BuildingBlocks\EventBus\EventBusRabbitMQ\EventBusRabbitMQ.csproj", "{2166E085-731A-409F-8349-8BD79BFCF283}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusServiceBus", "src\BuildingBlocks\EventBus\EventBusServiceBus\EventBusServiceBus.csproj", "{326C29CE-7B05-4C2D-8770-4D5041B199E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBusServiceBus", "BuildingBlocks\EventBus\EventBusServiceBus\EventBusServiceBus.csproj", "{326C29CE-7B05-4C2D-8770-4D5041B199E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationEventLogEF", "src\BuildingBlocks\EventBus\IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{D2615F86-46B6-449F-8AF5-A5DF4D1A5531}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationEventLogEF", "BuildingBlocks\EventBus\IntegrationEventLogEF\IntegrationEventLogEF.csproj", "{D2615F86-46B6-449F-8AF5-A5DF4D1A5531}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
