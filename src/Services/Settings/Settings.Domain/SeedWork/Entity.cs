@@ -7,17 +7,17 @@ namespace Settings.Domain.SeedWork
     public abstract class Entity
     {
         private int? _requestedHashCode;
-        private int _Id;
+        private int _id;
 
         public virtual int Id
         {
             get
             {
-                return _Id;
+                return _id;
             }
             protected set
             {
-                _Id = value;
+                _id = value;
             }
         }
 

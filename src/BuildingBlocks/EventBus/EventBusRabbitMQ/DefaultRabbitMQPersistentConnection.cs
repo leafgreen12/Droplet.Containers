@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Polly;
+using Polly.Retry;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using RabbitMQ.Client.Exceptions;
@@ -7,7 +8,7 @@ using System;
 using System.IO;
 using System.Net.Sockets;
 
-namespace EventBus.RabbitMQ
+namespace EventBusRabbitMQ
 {
     public class DefaultRabbitMQPersistentConnection
        : IRabbitMQPersistentConnection

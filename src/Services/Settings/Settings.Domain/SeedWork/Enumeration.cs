@@ -57,7 +57,7 @@ namespace Settings.Domain.SeedWork
             return matchingItem;
         }
 
-        private static T Parse<T, K>(K value, string description, Func<T, bool> predicate) where T : Enumeration
+        private static T Parse<T, TK>(TK value, string description, Func<T, bool> predicate) where T : Enumeration
         {
             var matchingItem = GetAll<T>().FirstOrDefault(predicate);
 

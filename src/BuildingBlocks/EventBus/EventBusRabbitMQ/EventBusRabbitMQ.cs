@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using EventBus;
 using EventBus.Abstractions;
 using EventBus.Events;
 using EventBus.Extensions;
@@ -13,8 +14,9 @@ using System;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using InMemoryEventBusSubscriptionsManager = EventBus.InMemoryEventBusSubscriptionsManager;
 
-namespace EventBus.RabbitMQ
+namespace EventBusRabbitMQ
 {
     public class EventBusRabbitMQ : IEventBus, IDisposable
     {
@@ -46,9 +48,7 @@ namespace EventBus.RabbitMQ
         private void SubsManager_OnEventRemoved(object sender, string eventName)
         {
             if (!_persistentConnection.IsConnected)
-            {
                 _persistentConnection.TryConnect();
-            }
 
             using var channel = _persistentConnection.CreateModel();
             channel.QueueUnbind(_queueName,
@@ -209,6 +209,9 @@ namespace EventBus.RabbitMQ
                 _logger.LogWarning(ex, "----- ERROR Processing message \"{Message}\"", message);
             }
 
+            // Even on exception we take the message off the queue.
+            // in a REAL WORLD app this should be handled with a Dead Letter Exchange (DLX).
+            // For more information see: https://www.rabbitmq.com/dlx.html
             _consumerChannel.BasicAck(eventArgs.DeliveryTag, false);
         }
 
