@@ -3,7 +3,7 @@ name: webhooks-api
 on:
   push:
     branches:
-    - master
+    - dev
 
     paths:
     - src/BuildingBlocks/**
@@ -12,7 +12,7 @@ on:
 
   pull_request:
     branches:
-    - master
+    - dev
 
     paths:
     - src/BuildingBlocks/**

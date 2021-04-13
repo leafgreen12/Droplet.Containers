@@ -3,7 +3,7 @@ name: apigateways
 on:
   push:
     branches:
-    - master
+    - dev
 
     paths:
     - src/ApiGateways/**
@@ -11,7 +11,7 @@ on:
 
   pull_request:
     branches:
-    - master
+    - dev
 
     paths:
     - src/ApiGateways/**
