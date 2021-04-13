@@ -33,7 +33,7 @@ jobs:
     
     - name: Compose build ${{ env.SERVICE }}
       run: sudo -E docker-compose build ${{ env.SERVICE }}
-      working-directory: .
+      working-directory: ./src
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
@@ -70,22 +70,22 @@ jobs:
 
     - name: Compose build ${{ env.SERVICE }}
       run: sudo -E docker-compose build ${{ env.SERVICE }}
-      working-directory: .
+      working-directory: ./src
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
         REGISTRY: ${{ secrets.REGISTRY_ENDPOINT }}
 
-    #- name: Compose push ${{ env.SERVICE }}
-    #  run: sudo -E docker-compose push ${{ env.SERVICE }}
-    #  working-directory: .
-    #  shell: bash
-    #  env:
-    #    TAG: ${{ env.BRANCH }}
-    #    REGISTRY: ${{ secrets.REGISTRY_ENDPOINT }}
+    - name: Compose push ${{ env.SERVICE }}
+      run: sudo -E docker-compose push ${{ env.SERVICE }}
+      working-directory: ./src
+      shell: bash
+      env:
+        TAG: ${{ env.BRANCH }}
+        REGISTRY: ${{ secrets.REGISTRY_ENDPOINT }}
 
-    #- name: Create multiarch manifest
-    #  run: |
-    #    docker --config ~/.docker manifest create ${{ secrets.REGISTRY_ENDPOINT  }}/${{ env.IMAGE  }}:${{ env.BRANCH  }} ${{ secrets.REGISTRY_ENDPOINT  }}/${{ env.IMAGE  }}:linux-${{ env.BRANCH  }}
-    #    docker --config ~/.docker manifest push ${{ secrets.REGISTRY_ENDPOINT  }}/${{ env.IMAGE  }}:${{ env.BRANCH  }}
-    #  shell: bash
+    - name: Create multiarch manifest
+      run: |
+        docker --config ~/.docker manifest create ${{ secrets.REGISTRY_ENDPOINT  }}/${{ env.IMAGE  }}:${{ env.BRANCH  }} ${{ secrets.REGISTRY_ENDPOINT  }}/${{ env.IMAGE  }}:linux-${{ env.BRANCH  }}
+        docker --config ~/.docker manifest push ${{ secrets.REGISTRY_ENDPOINT  }}/${{ env.IMAGE  }}:${{ env.BRANCH  }}
+      shell: bash

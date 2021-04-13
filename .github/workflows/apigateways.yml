@@ -31,7 +31,7 @@ jobs:
     
     - name: Compose build ${{ env.SERVICE }}
       run: sudo -E docker-compose build ${{ env.SERVICE }}
-      working-directory: .
+      working-directory: ./src
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
@@ -68,7 +68,7 @@ jobs:
 
     - name: Compose build ${{ env.SERVICE }}
       run: sudo -E docker-compose build ${{ env.SERVICE }}
-      working-directory: .
+      working-directory: ./src
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
@@ -76,7 +76,7 @@ jobs:
 
     - name: Compose push ${{ env.SERVICE }}
       run: sudo -E docker-compose push ${{ env.SERVICE }}
-      working-directory: .
+      working-directory: ./src
       shell: bash
       env:
         TAG: ${{ env.BRANCH }}
