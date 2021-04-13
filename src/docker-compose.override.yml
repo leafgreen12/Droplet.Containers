@@ -6,61 +6,61 @@ services:
     ports:
       - "80"
 
-  dynamic.api:
+  dynamic-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  emailing.api:
+  emailing-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  identity.api:
+  identity-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  settings.api:
+  settings-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  social.api:
+  social-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  storage.api:
+  storage-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  webhooks.api:
+  webhooks-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  web.dynamic:
+  web-dynamic:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  web.settings:
+  web-settings:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-  web.status:
+  web-status:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
