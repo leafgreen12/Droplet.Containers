@@ -22,7 +22,7 @@ services:
 
 
   identity-api:
-    image: ${REGISTRY:-droplet}/identity.api:${PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-droplet}/identity.api:${PLATFORM:-linux}-${TAG:-latest} 
     build:
       context: .
       dockerfile: Services/Identity/Identity.API/Dockerfile
